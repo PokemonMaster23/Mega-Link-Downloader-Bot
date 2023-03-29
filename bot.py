@@ -2,7 +2,7 @@ import os
 import logging
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from mega import Mega
-from config import MEGA_EMAIL, MEGA_PASSWORD
+from config import MEGA_EMAIL, MEGA_PASSWORD, TOKEN
 
 # Set up logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
