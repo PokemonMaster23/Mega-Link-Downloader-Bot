@@ -11,7 +11,8 @@ def download_mega(update, context):
     """Download file from Mega.nz link."""
     url = update.message.text
     try:
-        m = mega.login(MEGA_EMAIL, MEGA_PASSWORD)
+        m = mega.Mega()
+        m.login(MEGA_EMAIL, MEGA_PASSWORD)
         file = m.find(url)
         if file:
             file.download(os.getcwd())
@@ -20,6 +21,7 @@ def download_mega(update, context):
             update.message.reply_text('File not found. Please check your Mega.nz link.')
     except Exception as e:
         update.message.reply_text('Error: {}'.format(str(e)))
+
 
 def main():
     """Start the bot."""
