@@ -1,7 +1,12 @@
 import os
-import mega
+import logging
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
-from config import TOKEN, MEGA_EMAIL, MEGA_PASSWORD
+from mega import Mega
+from config import MEGA_EMAIL, MEGA_PASSWORD
+
+# Set up logging
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 def start(update, context):
     """Send a message when the command /start is issued."""
@@ -11,9 +16,8 @@ def download_mega(update, context):
     """Download file from Mega.nz link."""
     url = update.message.text
     try:
-        m = mega.Mega()
-        m.login(MEGA_EMAIL, MEGA_PASSWORD)
-        file = m.find(url)
+        mega = Mega()
+        file = mega.find(url)
         if file:
             file.download(os.getcwd())
             update.message.reply_text('File downloaded successfully!')
@@ -21,7 +25,6 @@ def download_mega(update, context):
             update.message.reply_text('File not found. Please check your Mega.nz link.')
     except Exception as e:
         update.message.reply_text('Error: {}'.format(str(e)))
-
 
 def main():
     """Start the bot."""
@@ -35,10 +38,11 @@ def main():
     dp.add_handler(CommandHandler("start", start))
 
     # on noncommand i.e message - echo the message on Telegram
-    dp.add_handler(MessageHandler(Filters.text & ~Filters.command, download_mega))
+    dp.add_handler(MessageHandler(Filters.regex('^https://mega\.nz/'), download_mega))
 
     # Start the Bot
     updater.start_polling()
+    logger.info('Bot started')
     updater.idle()
 
 if __name__ == '__main__':
