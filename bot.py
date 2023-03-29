@@ -1,37 +1,43 @@
-python
-def start_handler(event):
-    client.send_message(event.chat_id, 'Hi! I can download files from Mega.nz links. Just send me the link and I will download the file and send it to you!')
+import os
+import mega
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from config import TOKEN, MEGA_EMAIL, MEGA_PASSWORD
 
-# Handler function for files sent to the bot
-def download_handler(event):
-    # Check if the message has a mega.nz link
-    message_text = event.message.message
-    mega_match = mega_link_pattern.search(message_text)
-    if mega_match is None:
-        return
+def start(update, context):
+    """Send a message when the command /start is issued."""
+    update.message.reply_text('Hi! Send me a Mega.nz link and I will download it for you.')
 
-    # Get the Mega.nz link and key from the match object
-    file_id = mega_match.group(1) or mega_match.group(3)
-    file_key = mega_match.group(2)
-
-    # Download the file from Mega.nz
-    client.send_message(event.chat_id, 'Downloading file...')
-    mega_file = mega.get_public_link(file_id, file_key)
-    file_name = mega_file['name']
-    file_data = requests.get(mega_file['url']).content
-
-    # Save the file locally and send it to the user
-    with open(file_name, 'wb') as f:
-        f.write(file_data)
-    attributes = [DocumentAttributeFilename(file_name)]
+def download_mega(update, context):
+    """Download file from Mega.nz link."""
+    url = update.message.text
     try:
-        client.send_file(event.chat_id, file_name, attributes=attributes)
-    except PeerIdInvalidError:
-        client.send_message(event.chat_id, 'Error sending file: Invalid chat ID')
+        m = mega.login(MEGA_EMAIL, MEGA_PASSWORD)
+        file = m.find(url)
+        if file:
+            file.download(os.getcwd())
+            update.message.reply_text('File downloaded successfully!')
+        else:
+            update.message.reply_text('File not found. Please check your Mega.nz link.')
+    except Exception as e:
+        update.message.reply_text('Error: {}'.format(str(e)))
 
-# Start the bot
-client.connect()
-client.add_event_handler(start_handler, events.NewMessage(pattern='/start'))
-client.add_event_handler(download_handler, events.NewMessage(func=lambda event: True))
-client.start()
-client.run_until_disconnected()
+def main():
+    """Start the bot."""
+    # Create the Updater and pass it your bot's token.
+    updater = Updater(TOKEN, use_context=True)
+
+    # Get the dispatcher to register handlers
+    dp = updater.dispatcher
+
+    # on different commands - answer in Telegram
+    dp.add_handler(CommandHandler("start", start))
+
+    # on noncommand i.e message - echo the message on Telegram
+    dp.add_handler(MessageHandler(Filters.text & ~Filters.command, download_mega))
+
+    # Start the Bot
+    updater.start_polling()
+    updater.idle()
+
+if __name__ == '__main__':
+    main()
