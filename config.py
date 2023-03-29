@@ -1,7 +1,3 @@
-python
-import os
-
-# Telegram API token
-API_ID = os.environ.get('API_ID')
-API_HASH = os.environ.get('API_HASH')
-BOT_TOKEN = os.environ.get('BOT_TOKEN')
+TOKEN = "your_bot_token_here"
+MEGA_EMAIL = "your_mega_email_here"
+MEGA_PASSWORD = "your_mega_password_here"
