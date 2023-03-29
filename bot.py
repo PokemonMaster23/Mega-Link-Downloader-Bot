@@ -1,4 +1,4 @@
-python
+pyrogram
 def start_handler(event):
     client.send_message(event.chat_id, 'Hi! I can download files from Mega.nz links. Just send me the link and I will download the file and send it to you!')
 
