@@ -9,19 +9,22 @@ Created with ❤️ By [Pokemon Master](https://t.me/PokemonMasterContactBot). P
 
 ---
 
-# UPDATE -
+## UPDATE -
 <APRIL 1 2023> : Completely rewritten the code in pyrogram 🤩
+---
 
 ## Features 🔥
  - See progress bar for files in downloading and uploading in logs!
  - Vps supported! Render is supported as well!! No Heroku Support as of now... Try in own risk ☠️
  - Ability to download any file under 5GB! (If you provide a pro/business account when deploying there will be no file size limits! 😍)
  - More Features Coming Soon!
+ ---
 
 <b>Notes</b> :- 
 1. Due to telegram API limits I can't upload files which are bigger than 2GB...
 2. Quota limits can occur if you don't provide a pro/business account!
 3. Folder support is not implemented yet but can be added in the near future!
+---
 
 ## Variables 👍
 - `API_ID` -  Get this value from https://my.telegram.org/apps
@@ -29,6 +32,7 @@ Created with ❤️ By [Pokemon Master](https://t.me/PokemonMasterContactBot). P
 - `BOT_TOKEN` -  Make a bot from https://t.me/BotFather and enter the token here.
 - `EMAIL` - Create a mega email in mega.nz
 - `PASSWORD` - Create a password for your mega email in mega.nz
+---
 
 ## Bot Commands ✨
 
@@ -77,6 +81,8 @@ Easy.
 - Done. Your Bot Is Running🥳!!
  
  </details>
+ 
+ ---
 
 
 ## About the code 😁 -
@@ -94,6 +100,7 @@ Easy.
 * [Dan](https://github.com/delivrance) for [pyrogram](https://github.com/Pyrogram)
 
 <b>Project written and created by</b> - [Pokemon Master](https://github.com/PokemonMaster23)</b>
+---
 
 
 Hope you like This Repo ✌️
