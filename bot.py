@@ -1,49 +1,59 @@
-import os
+from pyrogram import Client, filters
+from pyrogram.types import Message
+import config
 import logging
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+import os
 from mega import Mega
-from config import MEGA_EMAIL, MEGA_PASSWORD, TOKEN
 
-# Set up logging
+# Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
-logger = logging.getLogger(__name__)
 
-def start(update, context):
-    """Send a message when the command /start is issued."""
-    update.message.reply_text('Hi! Send me a Mega.nz link and I will download it for you.')
+# Initialize Pyrogram client
+app = Client(
+    "MegaLinkDownloaderBot",
+    api_id=config.API_ID,
+    api_hash=config.API_HASH,
+    bot_token=config.BOT_TOKEN
+)
 
-def download_mega(update, context):
-    """Download file from Mega.nz link."""
-    url = update.message.text
-    try:
-        mega = Mega()
-        file = mega.find(url)
-        if file:
-            file.download(os.getcwd())
-            update.message.reply_text('File downloaded successfully!')
-        else:
-            update.message.reply_text('File not found. Please check your Mega.nz link.')
-    except Exception as e:
-        update.message.reply_text('Error: {}'.format(str(e)))
+# Start command handler
+@app.on_message(filters.command("start"))
+async def start_handler(client: Client, message: Message):
+    await message.reply_text('Hello! This bot can download files from mega.nz')
 
-def main():
-    """Start the bot."""
-    # Create the Updater and pass it your bot's token.
-    updater = Updater(TOKEN, use_context=True)
+# Download command handler
+@app.on_message(filters.command("download"))
+async def download_handler(client: Client, message: Message):
+    # Check if link is provided
+    if not message.text.split(" ")[1:]:
+        await message.reply_text('Please provide a valid mega.nz link')
+        return
+    
+    link = message.text.split(" ")[1]
+    logging.info(f'Downloading link: {link}')
+    await message.reply_text(f'Downloading {link}...')
 
-    # Get the dispatcher to register handlers
-    dp = updater.dispatcher
+    # Login to Mega.nz
+    mega = Mega()
+    m = mega.login(config.EMAIL, config.PASSWORD)
 
-    # on different commands - answer in Telegram
-    dp.add_handler(CommandHandler("start", start))
+    # Download file
+    file = m.download_url(link)
+    logging.info(f'Downloaded file: {file}')
+    await message.reply_text(f'Downloaded file: {file}')
+    
+    # Upload file to Telegram
+    logging.info(f'Uploading file: {file}')
+    await message.reply_text(f'Uploading {file}...')
+    await client.send_document(
+        chat_id=message.chat.id,
+        document=file,
+        progress=progress_callback
+    )
 
-    # on noncommand i.e message - echo the message on Telegram
-    dp.add_handler(MessageHandler(Filters.regex('^https://mega\.nz/'), download_mega))
+# Progress callback function for file upload
+async def progress_callback(current, total):
+    logging.info(f"Uploaded {current} out of {total} bytes ({current/total*100:.2f}%)")
 
-    # Start the Bot
-    updater.start_polling()
-    logger.info('Bot started')
-    updater.idle()
-
-if __name__ == '__main__':
-    main()
+# Run bot
+app.run()
