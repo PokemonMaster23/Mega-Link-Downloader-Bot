@@ -86,7 +86,7 @@ Easy.
 
 
 ## About the code 😁 -
-<p align="left"><b>This code is completely written by a noob 😓 Try the code and dont ask if anything is error!</b></p
+<p align="left"><b>This code is completely written by a noob 😓 Try the code and dont ask if anything is error!</b></p>
  ---
 
 ## Credits, and Thanks to
