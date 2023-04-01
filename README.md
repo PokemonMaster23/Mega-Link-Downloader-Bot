@@ -63,6 +63,7 @@ Simple.
   
   <br>
 Easy. 
+ <br>
 - Fill The variables `BOT_TOKEN`, `API_HASH` , `API_ID` , `MEGA EMAIL` & `MEGA PASSWORD` in your imported repo...
  <br>
 - Login in render
@@ -80,6 +81,7 @@ Easy.
 
 ## About the code 😁 -
 <p align="left"><b>This code is completely written by a noob 😓 Try the code and dont ask if anything is error!</b></p
+ ---
 
 ## Credits, and Thanks to
 
