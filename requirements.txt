@@ -1,2 +1,2 @@
-python-telegram-bot
-mega.py
+pyrogram==2.1
+megapy==1.0.1
