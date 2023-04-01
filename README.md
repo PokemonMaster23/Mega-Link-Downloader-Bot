@@ -50,8 +50,11 @@ Created with ❤️ By [Pokemon Master](https://t.me/PokemonMasterContactBot). P
 
 <br>
 Simple. 
+<br>
 - Fill The variables `BOT_TOKEN`, `API_HASH` , `API_ID` , `MEGA EMAIL` & `MEGA PASSWORD` in your imported repo...
+<br>
 - Use command `python3 bot.py` 
+<br>
 - Done. Your Bot Is Running🥳!!
 </details>
 
