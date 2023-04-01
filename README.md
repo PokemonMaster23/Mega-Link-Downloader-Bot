@@ -64,10 +64,15 @@ Simple.
   <br>
 Easy. 
 - Fill The variables `BOT_TOKEN`, `API_HASH` , `API_ID` , `MEGA EMAIL` & `MEGA PASSWORD` in your imported repo...
+ <br>
 - Login in render
+ <br> 
 - Create a web service
+ <br>
 - Choose your imported repo ( Authorize github before this )
+ <br>
 - Wait few mins until you see live status
+ <br>
 - Done. Your Bot Is Running🥳!!
  
  </details>
