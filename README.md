@@ -27,8 +27,8 @@ Created with ❤️ By [Pokemon Master](https://t.me/PokemonMasterContactBot). P
 - `API_ID` -  Get this value from https://my.telegram.org/apps
 - `API_HASH` - Get This Value from https://my.telegram.org/apps
 - `BOT_TOKEN` -  Make a bot from https://t.me/BotFather and enter the token here.
-- `EMAIL` - Enter your mega email.
-- `PASSWORD` - Enter your mega password.>
+- `EMAIL` - Create a mega email in mega.nz
+- `PASSWORD` - Create a password for your mega email in mega.nz
 
 ## Bot Commands ✨
 
