@@ -102,6 +102,5 @@ Easy.
 ---
 
 
-Hope you like This Repo ✌️
-<b>Join [@Pk_Botz](https://t.me/PK_Botz) In Telegram !</b>
+<b>Hope you like This Repo ✌️ Join [@Pk_Botz](https://t.me/PK_Botz) In Telegram !</b>
 <p align="center"><a href="https://t.me/PK_Botz"><img src="https://img.shields.io/badge/Telegram-Join%20Telegram%20Group-blue.svg?logo=telegram"></a></p>
