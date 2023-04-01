@@ -10,7 +10,7 @@ Created with ❤️ By [Pokemon Master](https://t.me/PokemonMasterContactBot). P
 ---
 
 ## UPDATE -
-   <APRIL 1 2023> : Completely rewritten the code in pyrogram 🤩
+   `<APRIL 1 2023>` : Completely rewritten the code in pyrogram 🤩
 ---
 
 ## Features 🔥
