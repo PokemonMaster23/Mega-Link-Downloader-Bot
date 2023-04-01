@@ -2,7 +2,7 @@
 <p align="left"><b>This is a telegram bot to download mega.nz links and return them as files/videos - Made by a hobby noob with some ai support 😜</b></p>
 
 <b>You can find the bot which runs this code soon in my channel! Join [@Pk_Botz](https://t.me/PK_Botz) In Telegram for more codes and bots!</b>
-<p align="left"><a href="https://t.me/PK_Botz"><img src="https://img.shields.io/badge/Telegram-Join%20Telegram%20Group-blue.svg?logo=telegram"></a></p>
+<p align="center"><a href="https://t.me/PK_Botz"><img src="https://img.shields.io/badge/Telegram-Join%20Telegram%20Group-blue.svg?logo=telegram"></a></p>
 
 Created with ❤️ By [Pokemon Master](https://t.me/PokemonMasterContactBot). Please star and fork this repo!✨😇
 <br>
