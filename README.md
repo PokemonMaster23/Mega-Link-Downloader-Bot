@@ -45,7 +45,7 @@ Created with ❤️ By [Pokemon Master](https://t.me/PokemonMasterContactBot). P
 
 # How To Deploy 🤔? -
 
-<b>Before these steps, Star the repo ⭐ , import this repo and make it private!</b> 
+<b>Before these steps, Star the repo ⭐ , [Clone this repo](https://github.com/PokemonMaster23/Mega-Link-Downloader-Bot) and make it private!</b> 
 
 <b>Now Follow These Steps 👇</b>
 
@@ -55,7 +55,7 @@ Created with ❤️ By [Pokemon Master](https://t.me/PokemonMasterContactBot). P
 <br>
 Simple. 
 <br>
-- Fill The variables `BOT_TOKEN`, `API_HASH` , `API_ID` , `MEGA EMAIL` & `MEGA PASSWORD` in your imported repo...
+- Fill The variables `BOT_TOKEN`, `API_HASH` , `API_ID` , `MEGA EMAIL` & `MEGA PASSWORD` in your cloned repo...
 <br>
 - Use command `python3 bot.py` 
 <br>
@@ -68,7 +68,7 @@ Simple.
   <br>
 Easy. 
  <br>
-- Fill The variables `BOT_TOKEN`, `API_HASH` , `API_ID` , `MEGA EMAIL` & `MEGA PASSWORD` in your imported repo...
+- Fill The variables `BOT_TOKEN`, `API_HASH` , `API_ID` , `MEGA EMAIL` & `MEGA PASSWORD` in your cloned repo...
  <br>
 - Login in render
  <br> 
