@@ -53,6 +53,7 @@ Simple.
 - Fill The variables `BOT_TOKEN`, `API_HASH` , `API_ID` , `MEGA EMAIL` & `MEGA PASSWORD` in your imported repo...
 - Use command `python3 bot.py` 
 - Done. Your Bot Is Running🥳!!
+</details>
 
 <details>
   <summary><b>Deploy In Render</b></summary>
@@ -65,6 +66,8 @@ Easy.
 - Choose your imported repo ( Authorize github before this )
 - Wait few mins until you see live status
 - Done. Your Bot Is Running🥳!!
+ 
+ </details>
 
 
 ## About the code 😁 -
