@@ -43,7 +43,7 @@ Created with ❤️ By [Pokemon Master](https://t.me/PokemonMasterContactBot). P
 
 ---
 
-# How To Deploy 🤔? -
+## How To Deploy 🤔? -
 
 <b>Before these steps, Star the repo ⭐ , [Clone this repo](https://github.com/PokemonMaster23/Mega-Link-Downloader-Bot/generate) and make it private!</b> 
 
