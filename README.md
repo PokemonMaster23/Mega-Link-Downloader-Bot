@@ -35,7 +35,7 @@ Created with ❤️ By [Pokemon Master](https://t.me/PokemonMasterContactBot). P
 <br>
 
 - `/start` - To check if the bot is alive!
-- `/download` - To download the files from mega.nz links ( Usage - /download <mega.nz file link> )
+- `/download` - To download the files from mega.nz links ( Usage - `/download <mega.nz file link>` )
 
 ---
 
