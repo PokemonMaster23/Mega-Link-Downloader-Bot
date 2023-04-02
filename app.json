@@ -1,0 +1,28 @@
+{
+  "name": "MegaLinkDownloaderBot",
+  "description": "Telegram bot to download files from mega.nz",
+  "repository": "https://github.com/PokemonMaster23/MegaLinkDownloaderBot",
+  "stack": "heroku-20",
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-python.git"
+    }
+  ],
+  "addons": [],
+  "env": {
+    "API_ID": "<your-api-id>",
+    "API_HASH": "<your-api-hash>",
+    "BOT_TOKEN": "<your-bot-token>",
+    "EMAIL": "<your-mega-email>",
+    "PASSWORD": "<your-mega-password>"
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1
+         "size": "Eco"
+    }
+  },
+  "scripts": {
+    "start": "python bot.py"
+  }
+}
