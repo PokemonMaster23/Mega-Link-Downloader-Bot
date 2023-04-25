@@ -11,11 +11,13 @@ Created with ❤️ By [Pokemon Master](https://t.me/PokemonMasterContactBot). P
 
 ## UPDATE -
 -   `<APRIL 1 2023>` : Completely rewritten the code in pyrogram 🤩
+-   `<APRIL 25 2023>` : Added Multi User Support! Multiple users can use the bot at the same time! Huge thanks to [This Person](https://github.com/abhinand0d)
 ---
 
 ## Features 🔥
  - See progress bar for files in downloading and uploading in logs!
- - Vps supported! Render is supported as well!! No Heroku Support as of now... Try in own risk ☠️
+ - Multi User Support! Multiple Users can use the bot at the same time!!
+ - Vps supported!! No Render/Heroku Support as of now... Try in own risk ☠️
  - Ability to download any file under 5GB! (If you provide a pro/business account when deploying there will be no file size limits! 😍)
  - More Features Coming Soon!
  ---
@@ -63,10 +65,10 @@ Simple.
 </details>
 
 <details>
-  <summary><b>Deploy In Render</b></summary>
+  <summary><b>Deploy In Render [NOT WORKING]</b></summary>
   
   <br>
-Easy. 
+THIS METHOD IS NOT WORKING! TRY IN OWN RISK ☠️ 
  <br>
 - Fill The variables `BOT_TOKEN`, `API_HASH` , `API_ID` , `MEGA EMAIL` & `MEGA PASSWORD` in your cloned repo...
  <br>
