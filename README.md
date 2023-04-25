@@ -11,7 +11,7 @@ Created with ❤️ By [Pokemon Master](https://t.me/PokemonMasterContactBot). P
 
 ## UPDATE -
 -   `<APRIL 1 2023>` : Completely rewritten the code in pyrogram 🤩
--   `<APRIL 25 2023>` : Added Multi User Support! Multiple users can use the bot at the same time! Huge thanks to [This Person](https://github.com/abhinand0d)
+-   `<APRIL 25 2023>` : Added Multi User Support! Multiple users can use the bot at the same time! Huge thanks to [This Person ❤️](https://github.com/abhinand0d)
 ---
 
 ## Features 🔥
@@ -98,6 +98,7 @@ THIS METHOD IS NOT WORKING! TRY IN OWN RISK ☠️
 * [Crazy Yash](https://github.com/CrazyYash27) for various helps!
 * [Chat GPT {OPEN AI}](https://chat.openai.com/) for assisting me!
 * [XMYSTERIOUSX](https://github.com/XMYSTERlOUSX) for references in your repo!
+* [Abhinand D](https://github.com/abhinand0d) for contribution of more stuff in this repo!
 * [Dan](https://github.com/delivrance) for [pyrogram](https://github.com/Pyrogram)
 
 <b>Project written and created by</b> - [Pokemon Master](https://github.com/PokemonMaster23)</b>
