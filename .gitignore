@@ -1,0 +1,6 @@
+.env/
+*.session
+*.session-journal
+*.msi
+*.pdf
+*.pyc
